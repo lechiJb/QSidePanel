@@ -3,7 +3,6 @@
 #include "math.hpp"
 #include "side_panel_helpers.hpp"
 
-#include <QDebug>
 
 
 void SidePanel::_setState(const SidePanelState new_state) {
@@ -76,8 +75,6 @@ SidePanel::SidePanel(QWidget *parent)
         this->setGeometry( new_geom );
 
         updateHandlerRect(_anim_progress, new_geom);
-
-        qDebug() << new_geom << t;
     };
 
 
@@ -208,7 +205,6 @@ void SidePanel::init()
     {
         if(_timer->isActive())
         {
-            qDebug() << "CLICK DURING ANIMATION";
 
             switch (_state) {
             case SidePanelState::Opening: { _setState(SidePanelState::Closing); } break;

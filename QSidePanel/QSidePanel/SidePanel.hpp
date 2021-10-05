@@ -103,8 +103,11 @@ public:
 
     QSize getHandlerSize() const;
 
+    SidePanelState getPanelState() const;
+
 signals:
     void stateChanged(SidePanelState state);
+    void  statePanelChanged(int state);
 
 protected:
     void resizeEvent(QResizeEvent* event) override;

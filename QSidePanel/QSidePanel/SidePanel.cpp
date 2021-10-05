@@ -231,7 +231,16 @@ void SidePanel::init()
 
     connect(this, &SidePanel::stateChanged, _handler, [this](SidePanelState state)
     {
-        updateHandler(state, _handler);
+            if (state == SidePanelState::Opening)
+            {
+                emit statePanelChanged(2);
+            }
+
+            else if (state == SidePanelState::Closing)
+            {
+                emit statePanelChanged(0);
+            }
+            updateHandler(state, _handler);
     });
 
 
@@ -322,6 +331,12 @@ QSize SidePanel::getHandlerSize() const
     return _handler->size();
 }
 
+// -----------------------------------------------------------------------------
+
+SidePanelState SidePanel::getPanelState() const
+{
+    return _state;
+}
 // -----------------------------------------------------------------------------
 
 #include <QResizeEvent>

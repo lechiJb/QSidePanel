@@ -26,7 +26,7 @@ public:
 
 private:
 
-    SidePanelState _state = SidePanelState::Closed;
+    SidePanelState _state = SidePanelState::Opened;
     void _setState(const SidePanelState new_state);
 
 

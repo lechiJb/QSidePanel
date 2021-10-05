@@ -28,7 +28,7 @@ PanelRightSide::PanelRightSide(QWidget *parent)
     this->updateHandler = [](const SidePanelState state, HandlerWidgetT* handler)
     {
         switch (state) {
-        case SidePanelState::Opening: { handler->setText(">"); } break;
+        case SidePanelState::Opening: { handler->setText(">");  } break;
         case SidePanelState::Opened:  { handler->setText(">"); } break;
         case SidePanelState::Closing: { handler->setText("<"); } break;
         case SidePanelState::Closed:  { handler->setText("<"); } break;

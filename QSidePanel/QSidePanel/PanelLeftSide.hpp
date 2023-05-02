@@ -7,6 +7,9 @@ class PanelLeftSide : public SidePanel
 {
     Q_OBJECT
 
+private:
+
+
 public:
 
     explicit PanelLeftSide(QWidget *parent = nullptr);

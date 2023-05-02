@@ -324,6 +324,25 @@ QSize SidePanel::getHandlerSize() const
 
 // -----------------------------------------------------------------------------
 
+void SidePanel::setButtonText(QString opening, QString opened, QString closing, QString closed)
+{
+    _button_text_opening = opening;
+    _button_text_opened = opened;
+    _button_text_closing = closing;
+    _button_text_closed = closed;
+}
+
+// -----------------------------------------------------------------------------
+
+void SidePanel::setButtonSize(int x, int y)
+{
+    _button_x = x;
+    _button_y = y;
+}
+
+// -----------------------------------------------------------------------------
+
+
 #include <QResizeEvent>
 
 void SidePanel::resizeEvent(QResizeEvent *event)

@@ -29,8 +29,10 @@ PanelRightSide::PanelRightSide(QWidget *parent)
         return q_sp::rect_aligned_left_center(panel_geom, handler_size);
     };
 
+
     this->initialHandlerSize = [this]() -> QSize {
         return {_button_y, _button_x};
+
     };
 
     this->updateHandler = [this](const SidePanelState state, HandlerWidgetT* handler)

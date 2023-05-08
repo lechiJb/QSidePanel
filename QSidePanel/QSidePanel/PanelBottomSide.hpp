@@ -5,8 +5,6 @@
 
 class PanelBottomSide : public SidePanel
 {
-    Q_OBJECT
-
 private:
 
 

@@ -28,7 +28,7 @@ public:
 
 private:
 
-    SidePanelState _state = SidePanelState::Closed;
+    SidePanelState _state = SidePanelState::Opened;
     void _setState(const SidePanelState new_state);
 
 
@@ -125,8 +125,12 @@ public:
     int getButtonSizeX(){return _button_x;};
     int getButtonSizeY(){return _button_y;};
 
+    SidePanelState getPanelState() const;
+
+
 signals:
     void stateChanged(SidePanelState state);
+    void  statePanelChanged(int state);
 
 protected:
     void resizeEvent(QResizeEvent* event) override;

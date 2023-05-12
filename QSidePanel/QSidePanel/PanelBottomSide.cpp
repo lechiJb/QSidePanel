@@ -13,7 +13,7 @@ PanelBottomSide::PanelBottomSide(QWidget *parent)
 
     this->_button_x = 120;
     this->_button_y = 60;
-
+    
     this->getOpenedRect = [this](const QRect& parent_rect) -> QRect
     {
         return q_sp::rect_opened_bottom(this->getPanelSize(), parent_rect);

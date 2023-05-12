@@ -5,7 +5,6 @@
 PanelRightSide::PanelRightSide(QWidget *parent)
     : SidePanel(parent)
 {
-
     this->_button_text_opening = ">";
     this->_button_text_opened = ">";
     this->_button_text_closing = "<";
@@ -28,7 +27,6 @@ PanelRightSide::PanelRightSide(QWidget *parent)
     {
         return q_sp::rect_aligned_left_center(panel_geom, handler_size);
     };
-
 
     this->initialHandlerSize = [this]() -> QSize {
         return {_button_y, _button_x};

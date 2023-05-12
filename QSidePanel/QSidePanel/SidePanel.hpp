@@ -4,8 +4,6 @@
 #include <QScrollArea>
 
 #include <QTimer>
-#include <QString>
-
 #include <chrono>
 
 #include <QEasingCurve>
@@ -28,7 +26,7 @@ public:
 
 private:
 
-    SidePanelState _state = SidePanelState::Opened;
+    SidePanelState _state = SidePanelState::Closed;
     void _setState(const SidePanelState new_state);
 
 
@@ -49,12 +47,9 @@ private:
 
     int _panel_size = 100; // px
 
-
-
 protected:
 
     bool eventFilter(QObject* watched, QEvent* event) override;
-
     QString _button_text_opening;
     QString _button_text_opened;
     QString _button_text_closing;
@@ -126,7 +121,6 @@ public:
     int getButtonSizeY(){return _button_y;};
 
     SidePanelState getPanelState() const;
-
 
 signals:
     void stateChanged(SidePanelState state);

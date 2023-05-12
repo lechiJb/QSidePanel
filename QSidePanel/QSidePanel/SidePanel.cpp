@@ -352,10 +352,8 @@ SidePanelState SidePanel::getPanelState() const
 {
     return _state;
 }
+
 // -----------------------------------------------------------------------------
-
-
-
 
 void SidePanel::resizeEvent(QResizeEvent *event)
 {
